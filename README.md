@@ -1,4 +1,10 @@
 # 🍰 Tiny Bakery POS (React + Tailwind + Firebase Hosting)
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Status](https://img.shields.io/badge/status-active-success)
+![Roadmap](https://img.shields.io/badge/next%20release-v2.0-lightgrey)
+
+> The first stable release of Tiny Sales.  
+> Stay tuned for **v2.0** with real-time sync, analytics, and role-based access.
 
 A **lightweight Point of Sale (POS)** system built with **React**, **Vite**, and **Tailwind CSS**, designed for a small bakery.  
 It supports **cashier and manager roles**, **inventory tracking**, **Buy 4 Get 1 Free promotions**, and **persistent data using localStorage**.  
