@@ -29,35 +29,38 @@ Deployed with **Firebase Hosting** and optionally integrated with **GitHub Actio
 | **GitHub Actions** | Optional CI/CD for automated deploys |
 
 
-🧱 Project Structure
+### 🧱 Project Structure
 
-Path	Description
-public/	Static files (favicon, manifest, etc.)
-src/	Core application source code
-├── components/	Reusable UI components (Cart, RestockPanel, AddItemForm, etc.)
-├── App.jsx	Main React POS app (handles inventory, roles, and UI logic)
-├── index.css	Tailwind CSS entry file (includes base, components, utilities)
-├── main.jsx	React root entry (renders the app using ReactDOM)
-└── assets/ (optional)	Local images, icons, or static assets
-.github/workflows/	GitHub Actions workflow files for automated Firebase deploys
-dist/	Production build output (generated after npm run build)
-package.json	Project metadata, scripts, and dependencies
-postcss.config.js	PostCSS + Autoprefixer configuration
-tailwind.config.js	Tailwind CSS configuration and theme extensions
-vite.config.js	Vite build configuration (alias, plugins, optimizations)
-firebase.json	Firebase Hosting configuration (public folder + rewrites)
-.firebaserc	Firebase project/site aliases
-README.md	Project documentation (this file)
+| Path / File | Description |
+|--------------|-------------|
+| **`public/`** | Contains static assets such as favicon, manifest, and other public files. |
+| **`src/`** | Core application source code for the Tiny Bakery POS app. |
+| ├── `components/` | Reusable UI components — `Cart`, `RestockPanel`, `AddItemForm`, etc. |
+| ├── `App.jsx` | Main React file — handles inventory, cashier/manager roles, and UI logic. |
+| ├── `index.css` | Tailwind CSS entry point (`@tailwind base; @tailwind components; @tailwind utilities;`). |
+| ├── `main.jsx` | ReactDOM entry point — renders the app root. |
+| └── `assets/` *(optional)* | Local images or icons (if used). |
+| **`.github/workflows/`** | Contains GitHub Actions workflows for automatic Firebase deployments. |
+| **`dist/`** | Production build output (auto-generated after running `npm run build`). |
+| **`package.json`** | Project configuration — scripts, dependencies, metadata. |
+| **`postcss.config.js`** | PostCSS + Autoprefixer configuration. |
+| **`tailwind.config.js`** | Tailwind setup and theme customization. |
+| **`vite.config.js`** | Vite build setup (plugins, aliases, optimizations). |
+| **`firebase.json`** | Firebase Hosting configuration file (public folder + rewrites). |
+| **`.firebaserc`** | Firebase project and site alias mappings. |
+| **`README.md`** | Project documentation (you’re reading it!). |
 
 
-🧭 Folder Summary
+### 🧭 Folder Overview
 
-Folder	Purpose
-src/	Contains all the application logic and UI code.
-components/	Houses modular, reusable React components.
-dist/	Auto-generated build folder for production deploys.
-.github/	Contains CI/CD automation for GitHub Actions.
-public/	Holds public static assets and metadata.
+| Folder | Purpose |
+|---------|----------|
+| `src/` | All application logic, components, and styling files. |
+| `components/` | Modular React components for clean architecture. |
+| `dist/` | Output directory for optimized production builds. |
+| `.github/` | CI/CD pipelines for automatic deploys. |
+| `public/` | Static frontend assets and metadata for hosting. |
+
 
 
 ## 🧰 Installation & Local Setup
