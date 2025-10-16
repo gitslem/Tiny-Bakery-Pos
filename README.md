@@ -4,7 +4,6 @@ A **lightweight Point of Sale (POS)** system built with **React**, **Vite**, and
 It supports **cashier and manager roles**, **inventory tracking**, **Buy 4 Get 1 Free promotions**, and **persistent data using localStorage**.  
 Deployed with **Firebase Hosting** and optionally integrated with **GitHub Actions for CI/CD**.
 
----
 
 ## 🚀 Features
 
@@ -18,7 +17,6 @@ Deployed with **Firebase Hosting** and optionally integrated with **GitHub Actio
 | ⚡ **Vite + Tailwind CSS** | Super-fast frontend stack for instant builds and hot reloading. |
 | ☁️ **Firebase Hosting** | Easily deployed live on Firebase (tinybakery.web.app). |
 
----
 
 ## 🧩 Tech Stack
 
@@ -30,24 +28,32 @@ Deployed with **Firebase Hosting** and optionally integrated with **GitHub Actio
 | **localStorage** | Offline data persistence |
 | **GitHub Actions** | Optional CI/CD for automated deploys |
 
----
-
-## 📦 Project Structure
+📦 Project Structure
 
 tiny-bakery-pos/
-├── public/                 # Static assets
-├── src/
-│   ├── App.jsx             # Main POS app (React logic)
-│   ├── index.css           # Tailwind entrypoint
-│   ├── main.jsx            # ReactDOM render
-│   ├── components/         # Sub-components (Cart, Restock, AddItemForm)
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── firebase.json           # Firebase hosting config
-└── README.md
+│
+├── public/                     # Static files (favicon, manifest, etc.)
+│
+├── src/                        # Application source code
+│   ├── components/             # Reusable UI components (Cart, RestockPanel, AddItemForm)
+│   ├── App.jsx                 # Main React application (Tiny Bakery POS logic)
+│   ├── index.css               # Tailwind CSS entry file
+│   ├── main.jsx                # ReactDOM root entry point
+│   └── assets/ (optional)      # Local images or icons if added
+│
+├── .github/
+│   └── workflows/              # GitHub Actions for CI/CD Firebase deploys
+│
+├── dist/                       # Production build output (auto-created via npm run build)
+│
+├── package.json                # Project metadata & dependencies
+├── tailwind.config.js          # Tailwind CSS configuration
+├── postcss.config.js           # PostCSS + Autoprefixer setup
+├── firebase.json               # Firebase Hosting configuration
+├── .firebaserc                 # Firebase project/site aliases
+├── vite.config.js              # Vite build setup
+└── README.md                   # Project documentation (you’re reading it!)
 
----
 
 ## 🧰 Installation & Local Setup
 
@@ -55,13 +61,12 @@ Follow these steps to run the app locally:
 
 | Step | Command / Action | Description |
 |------|------------------|-------------|
-| 1 | `git clone https://github.com/<YOUR_USER>/tiny-bakery-pos.git` | Clone the repo |
+| 1 | `git clone https://github.com/gitslem/tiny-bakery-pos.git` | Clone the repo |
 | 2 | `cd tiny-bakery-pos` | Enter the project directory |
 | 3 | `npm install` | Install dependencies |
 | 4 | `npm run dev` | Start local development server |
 | 5 | Open `http://localhost:5173` | Access your local app |
 
----
 
 ## 🎨 Tailwind CSS Setup
 
@@ -94,8 +99,6 @@ src/index.css
 @tailwind utilities;
 
 
-⸻
-
 🔥 Firebase Hosting Deployment
 
 You can host the bakery POS live on Firebase in just a few commands.
@@ -109,7 +112,7 @@ Step	Command	Description
 6	When asked for the public directory, type: dist	Specify your Vite build folder
 7	Choose: Configure as a single-page app → Yes	So /index.html handles routing
 8	firebase deploy --only hosting	Deploy your app live
-✅	Visit: https://tinybakery.web.app	See it live!
+✅	Visit: https://tinybakery.web.app
 
 Example firebase.json:
 
@@ -122,8 +125,6 @@ Example firebase.json:
   }
 }
 
-
-⸻
 
 🤖 GitHub Actions (CI/CD Auto Deploy)
 
@@ -173,8 +174,6 @@ jobs:
           target: tinybakery
 
 
-⸻
-
 🧠 Developer Notes
 	•	App state (cart, ledger, inventory, revenue) is persisted in browser localStorage under key tiny-bakery-pos-v2.
 	•	Manager mode enables:
@@ -184,7 +183,6 @@ jobs:
 	•	Prices are immutable — enforced in the UI.
 	•	Cake inventory is handled by slices, while other items are by units.
 
-⸻
 
 🧾 License
 
@@ -198,5 +196,4 @@ Tech Stack: React + Vite + TailwindCSS + Firebase
 Live App: https://tinybakery.web.app
 GitHub Repo: https://github.com/gitslem/tiny-bakery-pos
 
-
-“A sweet and simple POS for bakeries — fast, modern, and manager-friendly.”
+A sweet and simple POS for bakeries — fast, modern, and manager-friendly.
